@@ -1,5 +1,5 @@
 import os
-import django_database_url
+import dj_database_url
 
 """
 Django settings for myapi project.
@@ -87,7 +87,7 @@ DATABASES = {
     }
 }
 
-db_from_env = django_database_url.config(conn_max_age=500)
+db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
 # Password validation
